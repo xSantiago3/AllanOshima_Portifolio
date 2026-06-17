@@ -7,7 +7,7 @@
     "rewrites": [
       {
         "source": "/api/contact",
-        "function": { "functionId": "contact", "region": "us-central1" }
+        "function": { "functionId": "contact", "region": "southamerica-east1" }
       }
     ],
     "headers": [
@@ -46,6 +46,9 @@
         ]
       }
     ]
+  },
+  "firestore": {
+    "rules": "firestore.rules"
   },
   "functions": [
     {
