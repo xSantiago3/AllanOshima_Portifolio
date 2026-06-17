@@ -30,8 +30,10 @@
 ## M7 — Segurança & performance ✅
 - [x] Headers CSP/HSTS/etc. em `firebase.json`; Phaser code-split; export estático (R6)
 
-## M8 — Deploy
+## M8 — Deploy ✅ (live)
 - [x] `firebase.json` + GitHub Actions (build/deploy)
-- [ ] Escolher projeto Firebase + `firebase deploy --only hosting` → subdomínio `*.web.app`
-- [ ] (Opcional) Plano Blaze + deploy da função de contato
+- [x] Projeto Firebase dedicado `allan-oshima-portfolio` criado + `firebase deploy --only hosting`
+- [x] **No ar: https://allan-oshima-portfolio.web.app** (headers de segurança + cache imutável validados)
+- [ ] (Opcional) Plano Blaze + deploy da função de contato (form usa mailto até lá)
 - [ ] (Opcional) Domínio próprio
+- [ ] (Opcional) CI auto-deploy: adicionar secret `FIREBASE_SERVICE_ACCOUNT` no GitHub (variable já configurada)
