@@ -47,9 +47,14 @@ Pré-requisito: `firebase-tools` autenticado (login ou ADC do gcloud).
 npm run build
 npx firebase-tools deploy --only hosting --project <PROJECT_ID>
 ```
-O formulário de contato usa a Cloud Function (`/api/contact`); enquanto ela não estiver no ar
-(requer plano Blaze), o formulário cai graciosamente em `mailto:`. Headers de segurança e cache
-estão em `firebase.json`. Veja `spec/tasks.md` (M8) para os passos de domínio próprio.
+**Live:** https://allan-oshima-portfolio.web.app · **CI/CD:** push em `main` faz deploy keyless (Workload
+Identity Federation, sem chave) via `.github/workflows/firebase-hosting.yml`.
+
+**Contato:** a Cloud Function (`functions/`, gen2 em `southamerica-east1`) está no ar e grava cada lead
+na coleção **`leads`** do Firestore (veja no console do Firebase). Regras `deny-all` (`firestore.rules`)
+impedem acesso de cliente. Para notificação por e-mail, defina `RESEND_API_KEY` em `functions/.env`
+(ou outro provedor) e redeploy `npx firebase-tools deploy --only functions`. Se o backend falhar, o
+formulário cai em `mailto:`. Domínio próprio: `docs/CUSTOM_DOMAIN.md`.
 
 ## Acessibilidade
 O Modo Jornada é a fonte de conteúdo/SEO, é navegável por teclado e respeita `prefers-reduced-motion`.

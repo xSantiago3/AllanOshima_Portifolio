@@ -23,9 +23,14 @@
 ## M5 — Assets ✅
 - [x] Mundo/pétalas/personagem desenhados proceduralmente (sem dependência de pack externo) → ver CREDITS.md
 
-## M6 — Contato ✅
-- [x] Cloud Function gen2 (validação + honeypot + rate-limit + reCAPTCHA opcional + Firestore/Resend) (R5)
-- [x] Fallback mailto no cliente (R5)
+## M6 — Contato ✅ (live)
+- [x] Cloud Function gen2 **no ar** em `southamerica-east1` (R5)
+- [x] Endurecida pós-revisão de segurança: CORS restrito à origem, Content-Type/16KB, sanitização de
+  control-chars, reCAPTCHA fail-closed, **rate-limit durável no Firestore** (IP hasheado, buckets com TTL),
+  PII minimizada (sem IP cru) (R5)
+- [x] Regras Firestore **deny-all** (`firestore.rules`) — coleção `leads`/`ratelimits` só via Admin SDK
+- [x] Leads gravados no **Firestore** (e-mail via Resend fica plugável; free tier do usuário esgotado)
+- [x] Testado end-to-end: 405/415/400/200/429 corretos; fallback mailto no cliente (R5)
 
 ## M7 — Segurança & performance ✅
 - [x] Headers CSP/HSTS/etc. em `firebase.json`; Phaser code-split; export estático (R6)
@@ -34,6 +39,6 @@
 - [x] `firebase.json` + GitHub Actions (build/deploy)
 - [x] Projeto Firebase dedicado `allan-oshima-portfolio` criado + `firebase deploy --only hosting`
 - [x] **No ar: https://allan-oshima-portfolio.web.app** (headers de segurança + cache imutável validados)
-- [ ] (Opcional) Plano Blaze + deploy da função de contato (form usa mailto até lá)
-- [ ] (Opcional) Domínio próprio
-- [ ] (Opcional) CI auto-deploy: adicionar secret `FIREBASE_SERVICE_ACCOUNT` no GitHub (variable já configurada)
+- [x] (Opcional) Plano **Blaze** (conta Principal2) + função de contato no ar + **alerta de orçamento** R$30/mês
+- [x] (Opcional) **CI auto-deploy keyless** via Workload Identity Federation (sem chave) — validado num push real
+- [ ] (Opcional) **Domínio próprio** — adiado pelo usuário ("decidir depois"); passo a passo em `docs/CUSTOM_DOMAIN.md`
