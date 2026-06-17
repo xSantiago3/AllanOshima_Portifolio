@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "title": "Allan Oshima — AI/ML Engineer · Agents & AIOps",
+    "description": "Gamified portfolio of Allan Oshima, AI/ML specialist. AI agents, intelligent automation, GenAI and AIOps. Walk through the projects as a journey.",
+    "ogAlt": "Allan Oshima portfolio — black and gold Japanese theme"
+  },
+  "nav": {
+    "origin": "Origin",
+    "agents": "Agents",
+    "builds": "Projects",
+    "dojo": "Dojo",
+    "skip": "Skip to content"
+  },
+  "hud": {
+    "journey": "Journey",
+    "language": "Language",
+    "sound": "Sound",
+    "achievements": "Achievements",
+    "play": "Arcade mode",
+    "exitArcade": "Exit arcade",
+    "menu": "Map"
+  },
+  "hero": {
+    "kicker": "AI / ML Engineer",
+    "name": "Allan Oshima",
+    "role": "AI/ML specialist · Agents, GenAI & AIOps",
+    "tagline": "I build AI agents, intelligent automation, and operations that heal themselves. Travel through my journey — every stop is a real project.",
+    "ctaStart": "Begin the journey",
+    "ctaPlay": "Play (Arcade)",
+    "ctaPlayHint": "optional · steer a character through the world",
+    "scrollHint": "scroll to advance"
+  },
+  "zones": {
+    "origin": {
+      "label": "Zone 1",
+      "title": "The Starting Village",
+      "subtitle": "Where the journey begins"
+    },
+    "agents": {
+      "label": "Zone 2",
+      "title": "The Forest of Agents",
+      "subtitle": "AI agents and automation — my specialty"
+    },
+    "builds": {
+      "label": "Zone 3",
+      "title": "The Mountain of Builds",
+      "subtitle": "Products and sites I shipped"
+    },
+    "dojo": {
+      "label": "Zone 4",
+      "title": "The Shrine",
+      "subtitle": "Skills, certifications and contact"
+    }
+  },
+  "origin": {
+    "aboutTitle": "Who I am",
+    "about": "I'm a Senior AI/ML Computational Science Analyst at Accenture. I build GenAI and intelligent-automation solutions — AI agents, conversational flows and chatbots for customer service, sales and operational support. I also work in observability and AIOps, sustaining mission-critical environments with monitoring, intelligent incident response and remediation automation.",
+    "timelineTitle": "Career",
+    "present": "Present",
+    "educationTitle": "Education",
+    "education": "B.Sc. in Computer Science — Cruzeiro do Sul. Cambridge Certificate (English) — CNA.",
+    "languagesTitle": "Languages",
+    "langPt": "Portuguese — native",
+    "langEn": "English — C2 (proficient)",
+    "collectHint": "skill collected"
+  },
+  "agents": {
+    "intro": "This is my specialty. Here live the AI agents and automations I designed and shipped to production — from autonomous AIOps root-cause analysis to agent swarms that sell, support and process documents on their own.",
+    "problem": "The challenge",
+    "approach": "The approach",
+    "automation": "How the automation works",
+    "impact": "Impact",
+    "stackLabel": "Tech",
+    "confidentialNote": "Enterprise engagement — client and sensitive details anonymized."
+  },
+  "builds": {
+    "intro": "End-to-end products I designed, built and shipped — most running on GCP (Cloud Run / Firebase). From storefront to checkout, from chatbot to admin panel.",
+    "liveLabel": "live",
+    "viewLive": "View live",
+    "viewCode": "View code",
+    "stackLabel": "Tech",
+    "highlightsLabel": "Highlights"
+  },
+  "dojo": {
+    "title": "The Shrine",
+    "subtitle": "You reached the end of the journey. Here's the arsenal — and how to reach me.",
+    "skillsTitle": "Skill tree",
+    "certsTitle": "Certifications",
+    "cvTitle": "Résumé",
+    "downloadCvPt": "Download CV (PT)",
+    "downloadCvEn": "Download CV (EN)",
+    "contactTitle": "Let's talk",
+    "contactSubtitle": "Open to opportunities in applied AI, agents and AIOps.",
+    "or": "or",
+    "emailMe": "Email me directly",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about the role or project...",
+      "send": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent! I'll get back to you soon.",
+      "error": "Something went wrong. Try again or use the direct email.",
+      "invalid": "Please check the highlighted fields."
+    }
+  },
+  "skills": {
+    "groupGenai": "GenAI & Agents",
+    "groupAiops": "AIOps & Observability",
+    "groupEng": "Engineering & Data",
+    "groupCraft": "Ways of working",
+    "levels": {
+      "expert": "Expert",
+      "specialist": "Specialist",
+      "advanced": "Advanced",
+      "intermediate": "Intermediate"
+    }
+  },
+  "achievements": {
+    "title": "Achievements",
+    "unlocked": "Achievement unlocked",
+    "progress": "unlocked",
+    "firstStep": { "name": "First step", "desc": "Started the journey" },
+    "agentMaster": { "name": "Agent Master", "desc": "Visited every automation" },
+    "builder": { "name": "Builder", "desc": "Explored the shipped products" },
+    "polyglot": { "name": "Polyglot", "desc": "Switched language" },
+    "reachedDojo": { "name": "Enlightened", "desc": "Reached the Shrine" },
+    "secret": { "name": "Sakura Secret", "desc": "Found the secret code" }
+  },
+  "arcade": {
+    "loading": "Loading the world...",
+    "title": "Arcade mode",
+    "controlsTitle": "Controls",
+    "move": "Move",
+    "interact": "Interact",
+    "exit": "Exit",
+    "mobileHint": "Use the on-screen D-pad to walk and the center button to interact.",
+    "enter": "Enter the world",
+    "back": "Back to journey"
+  },
+  "common": {
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "prev": "Previous",
+    "of": "of",
+    "loading": "Loading..."
+  },
+  "footer": {
+    "builtWith": "Built with Next.js + Phaser on Google Cloud · black, gold, and a little sakura.",
+    "rights": "Allan Oshima"
+  }
+}

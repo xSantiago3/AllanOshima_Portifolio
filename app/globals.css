@@ -1,26 +1,317 @@
 @import "tailwindcss";
 
+/* ============================================================
+   Allan Oshima — Portfolio design system
+   Theme: sumi-e black & metallic gold, Japanese aesthetic
+   ============================================================ */
+
+@theme {
+  /* Ink / surfaces */
+  --color-ink: #0b0a07;
+  --color-ink-2: #100d09;
+  --color-ink-3: #16120b;
+  --color-sumi: #1d1810;
+  --color-line: #2a2114;
+
+  /* Gold ramp */
+  --color-gold: #d4af37;
+  --color-gold-bright: #e6c65a;
+  --color-gold-deep: #9c7a24;
+  --color-gold-muted: #b9a679;
+
+  /* Accents */
+  --color-paper: #efe9d8;
+  --color-cream: #ece7d8;
+  --color-sakura: #d98aa6;
+  --color-vermillion: #c0392b;
+  --color-jade: #6aa17b;
+
+  /* Text */
+  --color-text: #ece7d8;
+  --color-text-muted: #b9a679;
+  --color-text-dim: #8f8056;
+
+  /* Fonts (variables provided by next/font in the root layout) */
+  --font-sans: var(--font-zen), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-mincho), "Hiragino Mincho ProN", serif;
+  --font-pixel: var(--font-pixel), ui-monospace, monospace;
+
+  /* Easing */
+  --ease-emphasis: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  border-color: var(--color-line);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  background: var(--color-ink);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-ink);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ---------- Selection & focus ---------- */
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold-bright);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ink-2);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-deep);
+  border-radius: 6px;
+  border: 2px solid var(--color-ink-2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
+
+/* ============================================================
+   Utilities
+   ============================================================ */
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-pixel {
+    font-family: var(--font-pixel);
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(
+      180deg,
+      var(--color-gold-bright) 0%,
+      var(--color-gold) 45%,
+      var(--color-gold-deep) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .glow-gold {
+    text-shadow: 0 0 18px rgba(212, 175, 55, 0.35);
+  }
+
+  .ring-gold {
+    box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.35),
+      0 0 28px -6px rgba(212, 175, 55, 0.25);
+  }
+
+  /* hair-thin gold divider with a diamond in the middle (kintsugi vibe) */
+  .kintsugi {
+    position: relative;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--color-gold-deep) 30%,
+      var(--color-gold) 50%,
+      var(--color-gold-deep) 70%,
+      transparent
+    );
+  }
+  .kintsugi::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: var(--color-gold);
+  }
+
+  /* washi-paper-ish panel for project cards / dialogs */
+  .panel {
+    background:
+      radial-gradient(
+        120% 120% at 0% 0%,
+        rgba(212, 175, 55, 0.06),
+        transparent 55%
+      ),
+      var(--color-ink-2);
+    border: 1px solid var(--color-line);
+    border-radius: 14px;
+  }
+
+  .vignette {
+    background: radial-gradient(
+      120% 90% at 50% 30%,
+      transparent 55%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
+  }
+
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+/* ============================================================
+   Components
+   ============================================================ */
+@layer components {
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--color-ink);
+    background: linear-gradient(
+      180deg,
+      var(--color-gold-bright),
+      var(--color-gold)
+    );
+    border-radius: 9999px;
+    border: 1px solid var(--color-gold-bright);
+    transition:
+      transform 0.18s var(--ease-emphasis),
+      box-shadow 0.18s var(--ease-emphasis),
+      filter 0.18s var(--ease-emphasis);
+  }
+  .btn-gold:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 30px -12px rgba(212, 175, 55, 0.7);
+    filter: brightness(1.06);
+  }
+  .btn-gold:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.3rem;
+    font-weight: 500;
+    color: var(--color-gold);
+    background: transparent;
+    border-radius: 9999px;
+    border: 1px solid var(--color-gold-deep);
+    transition:
+      border-color 0.18s ease,
+      background 0.18s ease,
+      color 0.18s ease;
+  }
+  .btn-ghost:hover {
+    border-color: var(--color-gold);
+    background: rgba(212, 175, 55, 0.08);
+    color: var(--color-gold-bright);
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.28rem 0.7rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--color-gold-muted);
+    background: rgba(212, 175, 55, 0.06);
+    border: 1px solid var(--color-line);
+    border-radius: 9999px;
+  }
+}
+
+/* ============================================================
+   Keyframes
+   ============================================================ */
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(110vh) translateX(40px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0%,
+  60% {
+    opacity: 1;
+  }
+  61%,
+  100% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-blink {
+  animation: blink 1.4s steps(1) infinite;
+}
+.animate-float {
+  animation: float-y 4s ease-in-out infinite;
 }

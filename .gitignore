@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# firebase
+.firebase/
+firebase-debug.log*
+functions/lib/
+functions/node_modules/
+*.local
+
+# cv source (editable docx kept out of the repo; published PDFs live in public/cv)
+/_cv_source/

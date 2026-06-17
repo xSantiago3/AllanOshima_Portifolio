@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "title": "Allan Oshima — Engenheiro de IA/ML · Agentes & AIOps",
+    "description": "Portfólio gamificado de Allan Oshima, especialista em IA/ML. Agentes de IA, automações inteligentes, GenAI e AIOps. Percorra os projetos como uma jornada.",
+    "ogAlt": "Portfólio de Allan Oshima — tema japonês preto e dourado"
+  },
+  "nav": {
+    "origin": "Origem",
+    "agents": "Agentes",
+    "builds": "Projetos",
+    "dojo": "Dojo",
+    "skip": "Pular para o conteúdo"
+  },
+  "hud": {
+    "journey": "Jornada",
+    "language": "Idioma",
+    "sound": "Som",
+    "achievements": "Conquistas",
+    "play": "Modo Arcade",
+    "exitArcade": "Sair do arcade",
+    "menu": "Mapa"
+  },
+  "hero": {
+    "kicker": "AI / ML Engineer",
+    "name": "Allan Oshima",
+    "role": "Especialista em IA/ML · Agentes, GenAI & AIOps",
+    "tagline": "Eu construo agentes de IA, automações inteligentes e operações que se curam sozinhas. Atravesse minha jornada — cada parada é um projeto real.",
+    "ctaStart": "Começar a jornada",
+    "ctaPlay": "Jogar (Arcade)",
+    "ctaPlayHint": "opcional · controle um personagem pelo mundo",
+    "scrollHint": "role para avançar"
+  },
+  "zones": {
+    "origin": {
+      "label": "Zona 1",
+      "title": "A Vila do Início",
+      "subtitle": "Onde a jornada começa"
+    },
+    "agents": {
+      "label": "Zona 2",
+      "title": "A Floresta dos Agentes",
+      "subtitle": "Automações e agentes de IA — minha especialidade"
+    },
+    "builds": {
+      "label": "Zona 3",
+      "title": "A Montanha dos Projetos",
+      "subtitle": "Produtos e sites que entreguei"
+    },
+    "dojo": {
+      "label": "Zona 4",
+      "title": "O Santuário",
+      "subtitle": "Habilidades, certificações e contato"
+    }
+  },
+  "origin": {
+    "aboutTitle": "Quem sou",
+    "about": "Sou Analista Sênior de IA/ML (Computational Science) na Accenture. Desenvolvo soluções com GenAI e automação inteligente — agentes de IA, fluxos conversacionais e chatbots para atendimento, vendas e suporte operacional. Também atuo em observabilidade e AIOps, sustentando ambientes de missão crítica com monitoramento, resposta inteligente a incidentes e automação de remediação.",
+    "timelineTitle": "Trajetória",
+    "present": "Atual",
+    "educationTitle": "Formação",
+    "education": "Bacharelado em Ciência da Computação — Cruzeiro do Sul. Certificado Cambridge (Inglês) — CNA.",
+    "languagesTitle": "Idiomas",
+    "langPt": "Português — nativo",
+    "langEn": "Inglês — C2 (proficiente)",
+    "collectHint": "habilidade coletada"
+  },
+  "agents": {
+    "intro": "Esta é a minha especialidade. Aqui ficam os agentes de IA e automações que projetei e coloquei em produção — do RCA autônomo em AIOps a enxames de agentes que vendem, atendem e processam documentos sozinhos.",
+    "problem": "O desafio",
+    "approach": "A abordagem",
+    "automation": "Como a automação funciona",
+    "impact": "Impacto",
+    "stackLabel": "Tecnologias",
+    "confidentialNote": "Projeto corporativo — cliente e detalhes sensíveis anonimizados."
+  },
+  "builds": {
+    "intro": "Produtos completos que desenhei, construí e publiquei — a maioria rodando na GCP (Cloud Run / Firebase). Da vitrine ao checkout, do chatbot ao painel administrativo.",
+    "liveLabel": "no ar",
+    "viewLive": "Ver ao vivo",
+    "viewCode": "Ver código",
+    "stackLabel": "Tecnologias",
+    "highlightsLabel": "Destaques"
+  },
+  "dojo": {
+    "title": "O Santuário",
+    "subtitle": "Você chegou ao fim da jornada. Aqui está o arsenal — e como me encontrar.",
+    "skillsTitle": "Árvore de habilidades",
+    "certsTitle": "Certificações",
+    "cvTitle": "Currículo",
+    "downloadCvPt": "Baixar CV (PT)",
+    "downloadCvEn": "Baixar CV (EN)",
+    "contactTitle": "Vamos conversar",
+    "contactSubtitle": "Aberto a oportunidades em IA aplicada, agentes e AIOps.",
+    "or": "ou",
+    "emailMe": "Enviar e-mail direto",
+    "form": {
+      "name": "Nome",
+      "namePlaceholder": "Seu nome",
+      "email": "E-mail",
+      "emailPlaceholder": "voce@empresa.com",
+      "message": "Mensagem",
+      "messagePlaceholder": "Conte sobre a oportunidade ou projeto...",
+      "send": "Enviar mensagem",
+      "sending": "Enviando...",
+      "success": "Mensagem enviada! Retorno em breve.",
+      "error": "Algo deu errado. Tente novamente ou use o e-mail direto.",
+      "invalid": "Confira os campos destacados."
+    }
+  },
+  "skills": {
+    "groupGenai": "GenAI & Agentes",
+    "groupAiops": "AIOps & Observabilidade",
+    "groupEng": "Engenharia & Dados",
+    "groupCraft": "Formas de trabalhar",
+    "levels": {
+      "expert": "Proficiente",
+      "specialist": "Especialista",
+      "advanced": "Avançado",
+      "intermediate": "Intermediário"
+    }
+  },
+  "achievements": {
+    "title": "Conquistas",
+    "unlocked": "Conquista desbloqueada",
+    "progress": "desbloqueadas",
+    "firstStep": { "name": "Primeiro passo", "desc": "Começou a jornada" },
+    "agentMaster": { "name": "Mestre dos Agentes", "desc": "Visitou todas as automações" },
+    "builder": { "name": "Construtor", "desc": "Explorou os projetos publicados" },
+    "polyglot": { "name": "Poliglota", "desc": "Trocou de idioma" },
+    "reachedDojo": { "name": "Iluminado", "desc": "Chegou ao Santuário" },
+    "secret": { "name": "Segredo da Sakura", "desc": "Encontrou o código secreto" }
+  },
+  "arcade": {
+    "loading": "Carregando o mundo...",
+    "title": "Modo Arcade",
+    "controlsTitle": "Controles",
+    "move": "Mover",
+    "interact": "Interagir",
+    "exit": "Sair",
+    "mobileHint": "Use o direcional na tela para andar e o botão central para interagir.",
+    "enter": "Entrar no mundo",
+    "back": "Voltar à jornada"
+  },
+  "common": {
+    "close": "Fechar",
+    "back": "Voltar",
+    "next": "Próximo",
+    "prev": "Anterior",
+    "of": "de",
+    "loading": "Carregando..."
+  },
+  "footer": {
+    "builtWith": "Construído com Next.js + Phaser na Google Cloud · preto, dourado e um pouco de sakura.",
+    "rights": "Allan Oshima"
+  }
+}
